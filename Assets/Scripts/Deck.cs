@@ -5,9 +5,11 @@ using UnityEngine;
 public class Deck : MonoBehaviour
 {
     public List<Card> container = new List<Card>();
+    
     public int x;
-    public static int deckSize;
     public List<Card> deck = new List<Card>();
+    public static int deckSize;
+    
     public static List<Card> staticDeck = new List<Card>();
 
     public GameObject cardInDeck;
@@ -18,10 +20,11 @@ public class Deck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        deckSize = 52;
+        deckSize = deck.Count;
+        
         for (int i = 0; i < deckSize; i++)
         {
-            x = Random.Range(0, 53);
+            x = Random.Range(0, deckSize);
             deck[i] = CardDatabase.cardList[x];
         }
         StartCoroutine(StartGame());
@@ -30,12 +33,12 @@ public class Deck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        staticDeck = deck;
     }
 
     IEnumerator StartGame()
     {
-        for (int i = 0; i <= RoundRules.startAmount; i++)
+        for (int i = 0; i < RoundRules.startAmount; i++)
         {
             yield return new WaitForSeconds(1);
 

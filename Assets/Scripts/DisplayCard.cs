@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DisplayCard : MonoBehaviour
 {
-    public int deckSize;
+    //public int deckSize;
     public List<Card> displayCard = new List<Card>();
     public int displayId;
 
@@ -31,7 +31,7 @@ public class DisplayCard : MonoBehaviour
     {
         numCardsInDeck = Deck.deckSize;
 
-        displayCard[0] = CardDatabase.cardList[displayId];
+        displayCard.Add(CardDatabase.cardList[displayId]);
     }
 
     // Update is called once per frame

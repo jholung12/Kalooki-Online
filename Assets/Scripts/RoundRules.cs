@@ -23,10 +23,11 @@ public class RoundRules : MonoBehaviour
 
     public void calcStartAmount()
     {
-        string[] arr = round.Split();
-        for(int i = 0; i < arr.Length; i++)
+        
+        for(int i = 0; i < round.Length; i++)
         {
-            startAmount += Int32.Parse(arr[i]);
+            char c = round[i];
+            startAmount += (c - '0');
         }
     }
 }

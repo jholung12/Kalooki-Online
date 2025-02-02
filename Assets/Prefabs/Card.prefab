@@ -171,7 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aaf857651cfd24ba1766232fecf395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckSize: 0
   displayCard: []
   displayId: 0
   id: 
@@ -196,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7ccf171dac29a4f8806a63a0123520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardBack: {fileID: 0}
+  cardBack: {fileID: 593741519017525544, guid: e78bba17cb350d649988ac2a443e31d2, type: 3}
 --- !u!114 &-514685888831146819
 MonoBehaviour:
   m_ObjectHideFlags: 0
